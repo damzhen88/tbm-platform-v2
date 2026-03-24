@@ -1,54 +1,104 @@
 @import "tailwindcss";
 
-/* Custom styles from HTML - EXACT match */
-.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-.glass-nav { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
-.milled-button { background: linear-gradient(to bottom right, #465f88, #3a537b); }
-.asymmetric-clip { clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); }
-::selection { background-color: #c0d5ff; }
+@theme {
+  /* ALL COLORS FROM HTML EXACTLY */
+  --color-tertiary: #785a1a;
+  --color-on-tertiary-container: #624604;
+  --color-error-dim: #4e0309;
+  --color-tertiary-fixed: #fbd185;
+  --color-primary-fixed: #d6e3ff;
+  --color-surface-container: #eaeff1;
+  --color-on-secondary: #f7f9ff;
+  --color-surface-bright: #f8f9fa;
+  --color-on-surface: #2b3437;
+  --color-primary: #465f88;
+  --color-tertiary-container: #fbd185;
+  --color-inverse-surface: #0c0f10;
+  --color-surface-container-high: #e3e9ec;
+  --color-surface-container-lowest: #ffffff;
+  --color-secondary: #596069;
+  --color-secondary-dim: #4d545d;
+  --color-on-secondary-container: #4b525c;
+  --color-on-primary: #f6f7ff;
+  --color-outline-variant: #abb3b7;
+  --color-secondary-container: #dce3ee;
+  --color-on-error: #fff7f6;
+  --color-surface: #f8f9fa;
+  --color-inverse-primary: #aec7f6;
+  --color-on-surface-variant: #586064;
+  --color-on-tertiary-fixed-variant: #6c500f;
+  --color-surface-variant: #dbe4e7;
+  --color-tertiary-dim: #6b4e0e;
+  --color-surface-tint: #465f88;
+  --color-primary-dim: #3a537b;
+  --color-on-primary-container: #39527a;
+  --color-primary-fixed-dim: #c0d5ff;
+  --color-surface-dim: #d1dce0;
+  --color-secondary-fixed: #dce3ee;
+  --color-surface-container-low: #f1f4f6;
+  --color-error: #9f403d;
+  --color-on-tertiary: #fff8f1;
+  --color-primary-container: #d6e3ff;
+  --color-surface-container-highest: #dbe4e7;
+  --color-tertiary-fixed-dim: #ecc479;
+  --color-secondary-fixed-dim: #ced5e0;
+  --color-on-tertiary-fixed: #4a3400;
+  --color-on-primary-fixed-variant: #435c85;
+  --color-on-background: #2b3437;
+  --color-on-primary-fixed: #264067;
+  --color-inverse-on-surface: #9b9d9e;
+  --color-on-error-container: #752121;
+  --color-on-secondary-fixed: #394049;
+  --color-on-secondary-fixed-variant: #555c66;
+  --color-background: #f8f9fa;
+  --color-outline: #737c7f;
+  --color-error-container: #fe8983;
 
-/* Typography utilities */
-.label-md { font-size: 0.75rem; line-height: 1rem; font-weight: 500; }
-.title-md { font-size: 1.125rem; line-height: 1.75rem; font-weight: 600; }
-.text-label-md { font-size: 0.75rem; line-height: 1rem; font-weight: 500; }
-.text-body-lg { font-size: 1rem; line-height: 1.5rem; }
-.text-title-md { font-size: 1.125rem; line-height: 1.75rem; font-weight: 600; }
-.text-display-lg { font-size: 3.75rem; line-height: 1; }
-.text-headline-md { font-size: 1.375rem; line-height: 1.75rem; font-weight: 600; }
-.text-on-surface { color: #2b3437; }
-.text-on-surface-variant { color: #586064; }
-.text-surface { color: #f8f9fa; }
-.text-surface-variant { color: #dbe4e7; }
-.bg-surface { background-color: #f8f9fa; }
-.bg-surface-container { background-color: #eaeff1; }
-.bg-surface-container-low { background-color: #f1f4f6; }
-.bg-surface-container-high { background-color: #e3e9ec; }
-.bg-surface-container-highest { background-color: #dbe4e7; }
-.bg-surface-container-lowest { background-color: #ffffff; }
-.bg-on-surface { background-color: #2b3437; }
-.bg-primary-dim { background-color: #3a537b; }
-.bg-primary-fixed-dim { background-color: #c0d5ff; }
-.text-on-primary { color: #f6f7ff; }
-.text-primary-fixed { color: #d6e3ff; }
-.rounded-\[2rem\] { border-radius: 2rem; }
-.border-outline-variant\/10 { border-color: rgba(171, 179, 183, 0.1); }
-.bg-primary\/5 { background-color: rgba(70, 95, 136, 0.05); }
-.hover\:bg-primary\/10:hover { background-color: rgba(70, 95, 136, 0.1); }
-.hover\:shadow-2xl:hover { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
-.hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
-.hover\:shadow-primary\/5:hover { box-shadow: 0 0 0 0 rgba(70, 95, 136, 0.05); }
-.shadow-primary\/25 { --tw-shadow-color: rgba(70, 95, 136, 0.25); --tw-shadow: var(--tw-shadow-colored); }
-.text-primary-fixed-dim\/20 { color: rgba(192, 213, 255, 0.2); }
-.text-white\/50 { color: rgba(255, 255, 255, 0.5); }
-.text-white\/80 { color: rgba(255, 255, 255, 0.8); }
-.text-white\/10 { color: rgba(255, 255, 255, 0.1); }
-.text-on-primary-container { color: #39527a; }
-.bg-primary-container\/30 { background-color: rgba(214, 227, 255, 0.3); }
-.border-outline-variant\/20 { border-color: rgba(171, 179, 183, 0.2); }
-.hover\:translate-x-1:hover { transform: translateX(0.25rem); }
-.transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-.duration-500 { transition-duration: 500ms; }
-.-rotate-2 { transform: rotate(-2deg); }
-.group-hover\:rotate-0:hover { transform: rotate(0deg); }
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  /* Blue shades */
+  --color-blue-950: #0f172a;
+  --color-blue-900: #1e3a5f;
+  --color-blue-700: #1d4ed8;
+  --color-blue-600: #2563eb;
+  
+  /* Slate */
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  
+  /* Font families */
+  --font-headline: "Lexend", sans-serif;
+  --font-body: "Lexend", sans-serif;
+  --font-label: "Lexend", sans-serif;
+}
+
+/* Custom utilities from HTML */
+@layer utilities {
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+  }
+  
+  .milled-button {
+    background: linear-gradient(to bottom right, #465f88, #3a537b);
+  }
+  
+  .asymmetric-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  }
+  
+  .text-watermark {
+    color: #c0d5ff;
+    opacity: 0.15;
+  }
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Base styles from HTML */
+body {
+  font-family: 'Lexend', sans-serif;
+  background-color: #f8f9fa;
+  color: #2b3437;
+}
